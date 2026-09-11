@@ -1,11 +1,17 @@
 ﻿// 4TI.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
 
+/*
+* Komentarz w bloku.
+*/
+
 #include <iostream>
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << "Hello World!" << endl;
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
