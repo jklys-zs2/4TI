@@ -9,8 +9,13 @@
 
 using namespace std;
 
-int main()
-{
+int main(){
+    int wiekUcznia = 15;
+	float wagaUczniaKg = 50.5; // nie stosuje nazwy typu float kg = 50.5; bo nie wiadomo czy to waga w kg czy funtach
+
+    if (true) {
+		cout << "Prawda" << endl;
+    }
     cout << "Hello World!" << endl;
 }
 
