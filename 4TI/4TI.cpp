@@ -20,28 +20,30 @@ int main()
 	SetConsoleCP(CP_UTF8);
 #endif
 	setlocale(LC_ALL, "Polish");
-	int wiekUczniaLata = 0; // nie stosuje nazwy typu int wiek = 15; bo nie wiadomo czy to wiek w latach czy w miesiącach
-	float wagaUczniaKg = 50.5; // nie stosuje nazwy typu float kg = 50.5; bo nie wiadomo czy to waga w kg czy funtach
-	double wzrostUczniaM = 1.75; // nie stosuje nazwy typu double m = 1.75; bo nie wiadomo czy to w metrach czy w stopach
-	// zmienna double jest zmienną podwójnej precyzji, czyli może przechowywać liczby zmiennoprzecinkowe z większą dokładnością niż zmienna float
-	char plecUcznia = 'M'; // nie stosuje nazwy typu char p = 'M'; bo nie wiadomo czy to płeć czy coś innego
-	string imieUcznia = "Jan"; // nie stosuje nazwy typu string i = "Jan"; bo nie wiadomo czy to imię czy coś innego
-	bool czyUczenJestPelnoletni = false; // nie stosuje nazwy typu bool b = false; bo nie wiadomo czy to jest zmienna logiczna czy coś innego
-	cout << "Podaj wiek ucznia w latach: "; // << to operator przesunięcia bitowego w lewo, ale w tym przypadku jest używany do wyświetlania tekstu na ekranie
-	cin >> wiekUczniaLata; // >> to operator przesunięcia bitowego w prawo, ale w tym przypadku jest używany do wczytywania danych z klawiatury
-	if (wiekUczniaLata >= 18)czyUczenJestPelnoletni = true; // jeśli wiek ucznia jest większy lub równy 18 lat, to zmienna czyUczenJestPelnoletni przyjmuje wartość true
-	else czyUczenJestPelnoletni = false; // jeśli wiek ucznia jest mniejszy niż 18 lat, to zmienna czyUczenJestPelnoletni przyjmuje wartość false
-    if (czyUczenJestPelnoletni) 
+	string tablicaImion[5] = {"Jan", "Anna", "Piotr", "Maria", "Krzysztof"}; // deklaracja tablicy o nazwie tablicaImion, która może przechowywać 5 elementów typu string
+	tablicaImion[0] = "Janek"; // przypisanie wartości "Janek" do pierwszego elementu tablicy
+	int i = 0; // deklaracja zmiennej i, która będzie używana jako licznik w pętli for
+	/*
+	for (; ; ) // pętla for, która iteruje od 0 do 4 (łącznie 5 iteracji)
 	{
-		cout << "Uczen jest pelnoletni.\n"; // \n to znak nowej linii, czyli przejście do nowego wiersza
+		cout << "Imię ucznia nr " << i + 1 << ": " << tablicaImion[i] << endl; // wyświetlenie imienia ucznia nr i + 1 (bo indeksowanie w tablicy zaczyna się od 0)
+		i++; // zwiększenie wartości zmiennej i o 1 po każdej iteracji pętli
+		if (i < 5);
+		else break; // jeśli nie, to kontynuowanie pętli
 	}
-	else
+	*/
+	while (i < 5) // pętla while, która iteruje dopóki i jest mniejsze od 5
 	{
-		cout << "Uczen nie jest pelnoletni." << endl; // endl to znak nowej linii, czyli przejście do nowego wiersza
+		cout << "Imię ucznia nr " << i + 1 << ": " << tablicaImion[i] << endl; // wyświetlenie imienia ucznia nr i + 1 (bo indeksowanie w tablicy zaczyna się od 0)
+		i++; // zwiększenie wartości zmiennej i o 1 po każdej iteracji pętli
 	}
-	// cout << "Imie ucznia: " << imieUcznia << endl;
-	imieUcznia[0] = 'K'; // zmiana pierwszej litery imienia ucznia na 'K'
-	for (int i = 0; i < 3; i++)cout << imieUcznia[i]; // pętla for, która wykonuje się 3 razy
+	i = 0; // resetowanie wartości zmiennej i do 0, aby można było ponownie użyć jej w pętli do-while
+	do 
+	{
+		cout << "Imię ucznia nr " << i + 1 << ": " << tablicaImion[i] << endl; // wyświetlenie imienia ucznia nr i + 1 (bo indeksowanie w tablicy zaczyna się od 0)
+		i++; // zwiększenie wartości zmiennej i o 1 po każdej iteracji pętli
+	} 
+	while (i < 5); // pętla do-while, która iteruje dopóki i jest mniejsze od 5)
 	cout << endl; // przejście do nowego wiersza
     cout << "Koniec działania programu" << endl;
 }
